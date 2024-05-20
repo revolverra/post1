@@ -1,0 +1,11 @@
+a = input().lower().replace('.', ' ').replace(',', ' ').split()
+catalog = {}
+d = []
+c = 1
+for i in a:
+    if i in catalog:
+        catalog[i] += 1
+    else:
+        catalog[i] = c
+for key, value in catalog.items():
+    print(key, ':', value)
